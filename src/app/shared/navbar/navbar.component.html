@@ -1,1 +1,40 @@
-<p>navbar works!</p>
+<header class="absolute w-100 h-[6rem] top-0 left-0 right-0 z-10 flex justify-between items-center px-10">
+
+  <div>
+    Logo
+  </div>
+
+  <nav class="bg-white rounded-full py-2 px-4 w-max z-10">
+    <ul class="flex gap-[1.5rem]">
+      <li>
+        <a class="hover:opacity-[70%] transition" routerLink="home">
+          HOME
+        </a>
+      </li>
+      <li>
+        <a class="hover:opacity-[70%] transition" routerLink="products">
+          PRODUCTS
+        </a>
+      </li>
+      <li>
+        <a class="hover:opacity-[70%] transition" routerLink="about">
+          ABOUT
+        </a>
+      </li>
+      <li>
+        <a class="hover:opacity-[70%] transition" routerLink="contact">
+          CONTACT
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <button 
+      class="bg-transparent text-white rounded-full h-[3rem] w-max
+            hover:bg-white hover:text-black transition flex text-md"
+      >
+      <a routerLink="/login" class="h-full w-full text-center px-9 flex items-center rounded-full">
+        LOGIN
+      </a>
+    </button>
+</header>
