@@ -1,11 +1,11 @@
-<header class="absolute w-100 h-[6rem] top-0 left-0 right-0 z-10 flex justify-between items-center px-10">
+<header class="absolute w-100 h-[6rem] top-0 left-0 right-0 z-10 flex justify-around items-center px-10">
 
-  <div>
-    Logo
+  <div class="text-white italic font-bold text-2xl">
+    Dotén
   </div>
 
   <nav class="bg-white rounded-full py-2 px-4 w-max z-10">
-    <ul class="flex gap-[1.5rem]">
+    <ul class="flex items-center gap-[1.5rem]">
       <li>
         <a class="hover:opacity-[70%] transition" routerLink="home">
           HOME
@@ -26,15 +26,16 @@
           CONTACT
         </a>
       </li>
+      <li>
+        <button 
+        class="bg-slate-900 text-white rounded-full h-[2rem] w-max border border-slate-900
+               hover:bg-transparent hover:text-black hover:border hover:border-black transition flex text-md"
+        >
+          <a routerLink="/login" class="h-full w-full text-center px-9 flex items-center rounded-full">
+            LOGIN
+          </a>
+        </button>
+      </li>
     </ul>
   </nav>
-
-  <button 
-      class="bg-transparent text-white rounded-full h-[3rem] w-max
-            hover:bg-white hover:text-black transition flex text-md"
-      >
-      <a routerLink="/login" class="h-full w-full text-center px-9 flex items-center rounded-full">
-        LOGIN
-      </a>
-    </button>
 </header>

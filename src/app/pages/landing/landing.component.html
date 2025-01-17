@@ -1,18 +1,45 @@
-<section class="min-h-screen w-full rounded-2xl shadow relative" id="first-section">
-  <div class=" absolute bottom-0 left-0 mx-[5rem] mb-[7rem] text-white">
-    <h1 class="font-bold text-[4rem]">Impossible is nothing.</h1>
-    <p class="text-md w-[35rem] text-left">
-      Discover the fashion that defines you. At Dotén, we combine style, quality, and comfort to bring you 
-      unique pieces that highlight your personality. Every detail is crafted to accompany you in every moment, from casual to elegant. 
-      Dress your dreams!
-    </p>
-    <button 
-      class="bg-transparent border-white border-[1px] rounded-full h-[3rem] w-max mt-[2rem] text-lg
-            hover:bg-white hover:text-black transition flex"
-      >
-      <a routerLink="/products" class="h-full w-full text-center px-5 flex items-center rounded-full">
-        See our catalog here!
-      </a>
-    </button>
-  </div>
-</section>
+<main class="flex flex-col gap-[2rem]">
+  <section class="min-h-screen w-full rounded-2xl shadow relative" id="first-section">
+    <article class=" absolute bottom-0 left-0 mx-[5rem] mb-[7rem] text-white">
+      <h1 class="font-bold text-[4rem]">Impossible is nothing.</h1>
+      <p class="text-md w-[35rem] text-left">
+        Discover the fashion that defines you. At Dotén, we combine style, quality, and comfort to bring you 
+        unique pieces that highlight your personality. Every detail is crafted to accompany you in every moment, from casual to elegant. 
+        Dress your dreams!
+      </p>
+      <button 
+        class="bg-transparent border-white border-[1px] rounded-full h-[3rem] w-max mt-[2rem] text-lg italic font-bold
+              hover:bg-white hover:text-black transition flex"
+        >
+        <a routerLink="/products" class="h-full w-full text-center px-5 flex items-center rounded-full">
+          See our catalog here!
+        </a>
+      </button>
+    </article>
+  </section>
+  <section class="h-[25rem] w-full">
+    <div class="h-full w-full rounded-2xl bg-orange-200 flex justify-between bg-[#111723]">
+      <article class="text-white px-[2rem] pt-[3.5rem] flex flex-col gap-[2rem] w-[50%]">
+        <h2 class="font-bold text-[2.5rem]">
+          Featured Collection
+        </h2>
+        <p>Our platform's philosophy combines style, performance, and quality in every garment and accessory. 
+          Designed for those who aim to exceed their limits, we offer a selection of sportswear and gear that blends cutting-edge 
+          technology with innovative design.
+        </p>
+        <button 
+        class="bg-transparent border-white border-[1px] rounded-full h-[3rem] w-max mt-[2rem] text-lg italic font-bold
+              hover:bg-white hover:text-black transition flex"
+        >
+        <a routerLink="/products" class="h-full w-full text-center px-5 flex items-center rounded-full">
+          Shop now!
+        </a>
+      </button>
+      </article>
+      <img 
+      src="https://content.api.news/v3/images/bin/93dc83fcdde614f199048cd3b63d46bc" 
+      alt="model" 
+      class="w- object-fit-cover rounded-2xl">
+    </div>
+  </section>
+</main>
