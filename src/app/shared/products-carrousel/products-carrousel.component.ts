@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProductCardComponent } from "../product-card/product-card.component";
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-products-carrousel',
@@ -10,4 +11,8 @@ import { ProductCardComponent } from "../product-card/product-card.component";
 })
 export class ProductsCarrouselComponent {
 
+ @Input({ required: true })
+  data: Product[] = [];
+
+ constructor() {}
 }
