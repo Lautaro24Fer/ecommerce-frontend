@@ -15,4 +15,5 @@ export class ProductsCarrouselComponent {
   data: Product[] = [];
 
  constructor() {}
+ 
 }

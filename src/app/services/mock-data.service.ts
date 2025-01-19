@@ -19,7 +19,7 @@ export class MockDataService {
         color: ['blanco', 'negro'],
         category: 'Camiseta',
         stock: 10,
-        imageUrl: 'https://assets.adidas.com/images/w_600,f_auto,q_auto/0e38a5d13dd7485b84dfad630117e6a8_9366/Camiseta_River_Plate_85_Blanco_HC0296_01_laydown.jpg',
+        imageUrl: 'https://celadasa.vtexassets.com/arquivos/ids/360396-800-auto?v=638720230589830000&width=800&height=auto&aspect=true',
         brand: 'Adidas'
       },
       {

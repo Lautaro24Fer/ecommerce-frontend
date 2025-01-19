@@ -1,16 +1,13 @@
-<article class="h-[30rem] w-[25rem] rounded-lg px-4 pt-4 overflow-hidden shadow">
-  <img 
-  src="https://cdn.dribbble.com/userupload/15558020/file/original-39c43d21f1e021da526c5edfbb880e14.png?resize=1560x3376" 
-  alt="card-model"
-  class="h-[20rem] w-full object-cover"
-  >
+<article class="h-[30rem] w-[25rem] rounded-lg px-4 pt-4 overflow-hidden shadow bg-white hover:scale-[.95] transition relative">
+  <a routerLink="#" class="absolute h-full w-full top-0 left-0-bottom-0 right-0 rounded-lg"></a>
+  <img src="{{ imageUrl }}" alt="card-model" class="h-[20rem] w-full object-contain">
   <div class="mt-4 grid gap-2">
     <h3 class="font-bold text-2xl">
-      Producto de Messi
+      {{ name }}
     </h3>
-    <p class="font-bold text-2xl text-gray-800">$100.00</p>
+    <p class="font-bold text-2xl text-gray-800">{{ price | currency }}</p>
     <p class="font-bold text-md text-gray-600">
-      8 styles avilable
+      {{ color.length }} styles avilable
     </p>
   </div>
 </article>

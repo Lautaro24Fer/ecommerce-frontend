@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        fadeInHorizontalFromRight: 'fadeInHorizontalFromRight .6s ease-out forwards',
+        fadeInHorizontalFromRight: 'fadeInHorizontalFromRight .3s ease-out forwards',
         fadeInVerticalFromBottom: 'fadeInVerticalFromBottom .2s ease-out forwards',
       },
       keyframes: {
