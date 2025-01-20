@@ -1,3 +1,47 @@
-<section class="min-h-screen w-full bg-blue-200 rounded-2xl shadow">
-  <h1 class="text-white font-bold text-[2rem]">Products</h1>
+<section class="w-full text-black flex" style="height: calc(100vh - 5rem);">
+  <aside class="h-full w-[20rem] bg-white shadow p-4">
+    <h1 class="font-bold text-[2rem]">Catalog</h1>
+    <form class="mt-[1rem] grid">
+      <input 
+        class="h-[2.5rem] w-full py-1 pl-2 border rounded border-gray-200 transition text-[13px]
+        focus:border-white focus:ring focus:ring-gray-200 outline-none" 
+        type="text" 
+        name="search" 
+        id="searchId" 
+        placeholder="Search for name, brand, type..."
+      >
+
+      <label for="brandSelector" class="mt-[1rem]">Brand:</label>
+      <select id="brandSelector" name="brand">
+        <option value="option1">All</option>
+        <option value="option2">Adidas</option>
+        <option value="option3">Puma</option>
+        <option value="option3">Nike</option>
+      </select>
+
+      <label for="productTypeSelector" class="mt-[1rem]">Product type:</label>
+      <select id="productTypeSelector" name="productType">
+        <option value="option1">All</option>
+        <option value="option2">Camiseta</option>
+        <option value="option3">Pelota</option>
+        <option value="option3">Balon</option>
+      </select>
+
+      <label class="mt-[1rem]" for="minPrice">Minium price</label>
+      <input type="number" class="px-1 h-[2.5rem] border border-[1px] rounded border-gray-200" name="price" id="minPrice" [defaultValue]="0">
+      <label class="mt-[1rem]" for="maxPrice">Maxium price:</label>
+      <input type="number" class="px-1 h-[2.5rem] border border-[1px] rounded border-gray-200" name="price" id="maxPrice" [defaultValue]="0">
+    </form>
+  </aside>
+  <main class="w-full opacity-0 p-5 grid grid-cols-4 gap-4 overflow-auto" appInView="animate-fadeInSmallToBig">
+    @for (item of data; track $index) {
+      <app-product-card 
+      [name]="item.name" 
+      [description]="item.description" 
+      [imageUrl]="item.imageUrl" 
+      [price]="item.price"
+      [color]="item.color"
+      />
+    }
+  </main>
 </section>

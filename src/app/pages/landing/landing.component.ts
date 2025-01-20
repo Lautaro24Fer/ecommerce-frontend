@@ -10,7 +10,7 @@ import { Product } from '../../models/product';
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [RouterLink, ProductsCarrouselComponent, FooterComponent, InViewDirective],
+  imports: [RouterLink, FooterComponent, InViewDirective, ProductCardComponent],
   providers: [MockDataService],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
