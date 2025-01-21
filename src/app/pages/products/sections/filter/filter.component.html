@@ -1,12 +1,5 @@
 <form class="mt-[1rem] grid">
-  <input 
-    class="h-[2.5rem] w-full py-1 pl-2 border bg-transparent rounded border-gray-200 transition text-[13px]
-    focus:border-white focus:ring focus:ring-gray-200 outline-none" 
-    type="text" 
-    name="search" 
-    id="searchId" 
-    placeholder="Search for name, brand, type..."
-  >
+  
 
   <label for="brandSelector" class="mt-[1rem]">Brand:</label>
   <select id="brandSelector" name="brand" class="bg-transparent">
@@ -24,21 +17,45 @@
     <option value="option3">Balon</option>
   </select>
 
+  <label for="genreSelector" class="mt-[1rem]">Genre:</label>
+  <select id="genreSelector" class="bg-transparent" name="genre">
+    <option value="option1">All</option>
+    <option value="option2">Male</option>
+    <option value="option3">Female</option>
+    <option value="option3">Kids</option>
+  </select>
+
   <label class="mt-[1rem]" for="minPrice">Minium price</label>
-  <input type="number" class="px-1 h-[2.5rem] border border-[1px] bg-transparent rounded border-gray-200" name="price" id="minPrice" [defaultValue]="0">
+  <input 
+    type="number" 
+    class="px-1 h-[2.5rem] border border-[1px] bg-transparent rounded border-gray-200" 
+    name="price" 
+    id="minPrice" 
+    [defaultValue]="0"
+    min="0"
+    max="10"
+  >
   <label class="mt-[1rem]" for="maxPrice">Maxium price:</label>
-  <input type="number" class="px-1 h-[2.5rem] border border-[1px] bg-transparent rounded border-gray-200" name="price" id="maxPrice" [defaultValue]="0">
+  <input 
+    type="number" 
+    class="px-1 h-[2.5rem] border border-[1px] bg-transparent rounded border-gray-200" 
+    name="price" 
+    id="maxPrice" 
+    [defaultValue]="0"
+    min="0"
+    max="10"
+  >
 
-  <div class="form-control mt-[1rem]">
-    <label class="cursor-pointer label">
-      <span class="text-black label-text">Only offers</span>
-      <input type="checkbox" class="checkbox checkbox-info" />
-    </label>
+  <label class="cursor-pointer label">
+    <span class="text-black label-text">Only offers</span>
+    <input type="checkbox" class="checkbox checkbox-info" />
+  </label>
 
-    <label class="cursor-pointer label">
-      <span class="text-black label-text">Unstocked</span>
-      <input type="checkbox" class="checkbox checkbox-info" />
-    </label>
+  <label class="cursor-pointer label">
+    <span class="text-black label-text">Unstocked</span>
+    <input type="checkbox" class="checkbox checkbox-info" />
+  </label>
 
-  </div>
+
+  <input type="submit" value="Filter" class="rounded bg-slate-800 text-white my-[1.5rem] p-2 hover:cursor-pointer hover:bg-slate-900 transition">
 </form>

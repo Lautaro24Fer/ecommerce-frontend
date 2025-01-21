@@ -1,14 +1,29 @@
 <section class="w-full text-black flex" style="height: calc(100vh - 5rem);">
-  <aside class="h-full w-[20rem] bg-white shadow p-4">
-    <h1 class="font-bold text-[2rem]">Catalog</h1>
+  <aside class="h-full w-[20rem] bg-white shadow p-4 relative">
     <!--Filters-->
     <app-filter />
+    <button class="absolute h-[2rem] w-[2rem] z-100 bottom-0 right-0 m-[1.5rem]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+      </svg>
+    </button>
   </aside>
   <main class="w-full h-full p-5 overflow-auto">
-    <div class="flex items-center gap-[1rem]">
-      <button class="px-3 py-1 rounded-full bg-slate-200 font-light hover:bg-slate-300 transition">Chipper first</button>
-      <button class="px-3 py-1 rounded-full bg-slate-200 font-light hover:bg-slate-300 transition">Expensive first</button>
-    </div>
+    <form class="flex flex-col gap-[1rem]">
+      <input 
+        class="h-[3rem] max-w-[40rem] py-1 pl-2 border bg-white rounded border-gray-200 transition text-[15px]
+        focus:border-white focus:ring focus:ring-gray-200 outline-none" 
+        type="text" 
+        name="search" 
+        id="searchId" 
+        placeholder="Search for name, brand, type..."
+      >
+      <div class="flex items-center gap-[1rem]">
+        <button class="px-3 py-1 rounded-full bg-slate-200 font-light hover:bg-slate-300 transition">Chipper first</button>
+        <button class="px-3 py-1 rounded-full bg-slate-200 font-light hover:bg-slate-300 transition">Expensive first</button>
+      </div>
+    </form>
     <!--Board-->
     <app-board [data]="data" />
   </main>

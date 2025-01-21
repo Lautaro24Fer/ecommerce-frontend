@@ -5,11 +5,12 @@ import { ProductCardComponent } from "../../shared/product-card/product-card.com
 import { InViewDirective } from '../../directives/in-view.directive';
 import { FilterComponent } from "./sections/filter/filter.component";
 import { BoardComponent } from "./sections/board/board.component";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome"
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [ FilterComponent, BoardComponent],
+  imports: [ FilterComponent, BoardComponent ],
   providers: [MockDataService],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
