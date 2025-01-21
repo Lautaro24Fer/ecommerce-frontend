@@ -6,7 +6,7 @@ import { InViewDirective } from '../../../../directives/in-view.directive';
 @Component({
   selector: 'app-board',
   standalone: true,
-  imports: [ProductCardComponent, InViewDirective],
+  imports: [ProductCardComponent],
   templateUrl: './board.component.html',
   styleUrl: './board.component.css'
 })

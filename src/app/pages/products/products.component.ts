@@ -14,14 +14,10 @@ import { BoardComponent } from "./sections/board/board.component";
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
   data!: Product[];
 
   constructor(dataService: MockDataService) {
     this.data = dataService.getMockedData();
-  }
-  ngOnInit(): void {
-    console.log("--DATA--")
-    console.log(this.data.length)
   }
 }

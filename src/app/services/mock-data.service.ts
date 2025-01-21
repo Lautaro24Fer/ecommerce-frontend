@@ -110,7 +110,7 @@ export class MockDataService {
         imageUrl: 'https://celadasa.vtexassets.com/arquivos/ids/360396-800-auto?v=638720230589830000&width=800&height=auto&aspect=true',
         brand: 'Adidas'
       },
-      /*{
+      {
         id: 10,
         name: 'Pelota Brazuca',
         price: 900,
@@ -164,7 +164,7 @@ export class MockDataService {
         stock: 10,
         imageUrl: 'https://essential.vtexassets.com/arquivos/ids/1514011-800-auto?v=638591466763200000&width=800&height=auto&aspect=true',
         brand: 'Nike'
-      }*/
+      }
     ]
 
     return mockData;

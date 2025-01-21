@@ -1,4 +1,9 @@
-<article class="h-[30rem] max-w-[25rem] rounded-lg px-4 pt-4 overflow-hidden bg-white hover:scale-[.98] hover:shadow transition relative">
+@defer () {
+  <article 
+  class="h-[30rem] max-w-[25rem] rounded-lg px-4 pt-4 overflow-hidden bg-white hover:scale-[.98] 
+    hover:shadow transition relative opacity-0"
+  appInView="animate-fadeInSmallToBig"
+  >
   <a routerLink="#" class="absolute h-full w-full top-0 left-0-bottom-0 right-0 rounded-lg"></a>
   <img src="{{ imageUrl }}" alt="card-model" class="h-[20rem] w-full object-contain opacity-0" (load)="onImageLoad($event)" loading="lazy">
   <div class="mt-4 grid gap-2">
@@ -11,3 +16,15 @@
     </p>
   </div>
 </article>
+}
+@placeholder {
+  <article class="bg-neutral-300 h-[30rem] max-w-[25rem] rounded-lg px-4 pt-4">
+  </article>
+}
+@loading(minimum 1000ms;) {
+<div
+  class="flex flex-col bg-neutral-300 max-w-[25rem] h-[30rem] animate-pulse rounded-xl p-4 gap-4"
+>
+</div>
+
+}

@@ -2,11 +2,12 @@ import { CurrencyPipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LazyLoadingImagesService } from '../../services/lazy-loading-images.service';
+import { InViewDirective } from '../../directives/in-view.directive';
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [CurrencyPipe, RouterLink],
+  imports: [CurrencyPipe, RouterLink, InViewDirective],
   providers: [LazyLoadingImagesService],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.css'
