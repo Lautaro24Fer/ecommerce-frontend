@@ -1,6 +1,5 @@
-@defer () {
-  <div class="mt-[1rem] grid grid-cols-4 gap-4 opacity-0" appInView="animate-fadeInSmallToBig">
-    @for (item of data; track item.id) {
+  <div class="mt-[1rem] grid grid-cols-4 gap-4 h-max">
+    @for (item of data; track $index) {
         <app-product-card 
         [name]="item.name" 
         [description]="item.description" 
@@ -10,12 +9,3 @@
         />
     }
   </div>
-}
-@loading( after 2000ms; ) {
-  <p>Cargando...</p>
-}
-@placeholder {
-  <section class="h-full w-full flex justify-center">
-    <p>placeholder</p>
-  </section>
-}

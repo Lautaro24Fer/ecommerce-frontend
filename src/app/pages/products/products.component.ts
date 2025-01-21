@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MockDataService } from '../../services/mock-data.service';
 import { Product } from '../../models/product';
 import { ProductCardComponent } from "../../shared/product-card/product-card.component";
@@ -14,10 +14,14 @@ import { BoardComponent } from "./sections/board/board.component";
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
   data!: Product[];
 
   constructor(dataService: MockDataService) {
     this.data = dataService.getMockedData();
+  }
+  ngOnInit(): void {
+    console.log("--DATA--")
+    console.log(this.data.length)
   }
 }
