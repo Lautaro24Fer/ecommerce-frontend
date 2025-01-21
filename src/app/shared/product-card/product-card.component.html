@@ -1,6 +1,6 @@
-<article class="h-[30rem] max-w-[25rem] rounded-lg px-4 pt-4 overflow-hidden bg-white hover:scale-[.95] transition relative">
+<article class="h-[30rem] max-w-[25rem] rounded-lg px-4 pt-4 overflow-hidden bg-white hover:scale-[.98] hover:shadow transition relative">
   <a routerLink="#" class="absolute h-full w-full top-0 left-0-bottom-0 right-0 rounded-lg"></a>
-  <img src="{{ imageUrl }}" alt="card-model" class="h-[20rem] w-full object-contain">
+  <img src="{{ imageUrl }}" alt="card-model" class="h-[20rem] w-full object-contain opacity-0" (load)="onImageLoad($event)" loading="lazy">
   <div class="mt-4 grid gap-2">
     <h3 class="font-bold text-2xl text-ellipsis overflow-hidden text-nowrap" style="width: calc(100% - 1rem);">
       {{ name }}

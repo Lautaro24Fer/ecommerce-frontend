@@ -1,6 +1,4 @@
 #first-section{
-  background-image: url('https://elmarketingdeportivo.com/wp-content/uploads/2024/12/682805-scaled.jpg');
-  background-size: cover;
   -webkit-animation: slide-right 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-right 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

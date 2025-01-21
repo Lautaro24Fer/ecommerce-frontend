@@ -3,11 +3,13 @@ import { MockDataService } from '../../services/mock-data.service';
 import { Product } from '../../models/product';
 import { ProductCardComponent } from "../../shared/product-card/product-card.component";
 import { InViewDirective } from '../../directives/in-view.directive';
+import { FilterComponent } from "./sections/filter/filter.component";
+import { BoardComponent } from "./sections/board/board.component";
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [ProductCardComponent, InViewDirective],
+  imports: [ FilterComponent, BoardComponent],
   providers: [MockDataService],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'

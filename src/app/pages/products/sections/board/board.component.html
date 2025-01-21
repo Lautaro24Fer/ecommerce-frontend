@@ -1,0 +1,21 @@
+@defer () {
+  <div class="mt-[1rem] grid grid-cols-4 gap-4 opacity-0" appInView="animate-fadeInSmallToBig">
+    @for (item of data; track item.id) {
+        <app-product-card 
+        [name]="item.name" 
+        [description]="item.description" 
+        [imageUrl]="item.imageUrl" 
+        [price]="item.price"
+        [color]="item.color"
+        />
+    }
+  </div>
+}
+@loading( after 2000ms; ) {
+  <p>Cargando...</p>
+}
+@placeholder {
+  <section class="h-full w-full flex justify-center">
+    <p>placeholder</p>
+  </section>
+}

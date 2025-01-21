@@ -1,5 +1,12 @@
 <main class="flex flex-col p-4 gap-[5rem]">
-  <section class="min-h-screen w-full rounded-2xl shadow relative" id="first-section">
+  <section class="bg-slate-500 min-h-screen w-full rounded-2xl shadow relative" id="first-section">
+    <img 
+      src="https://elmarketingdeportivo.com/wp-content/uploads/2024/12/682805-scaled.jpg" 
+      alt="landing-image"
+      class="absolute h-full w-full top-0 left-0 -z-100 opacity-0 transition duration-700 object-cover rounded-2xl"
+      loading="lazy"
+      (load)="landingImageOnLoad($event)"
+      >
     <article class=" absolute bottom-0 left-0 mx-[5rem] mb-[7rem] text-white">
       <h1 class="font-bold text-[4rem]">Impossible is nothing.</h1>
       <p class="text-md w-[35rem] text-left">

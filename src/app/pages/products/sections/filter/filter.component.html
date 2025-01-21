@@ -1,0 +1,44 @@
+<form class="mt-[1rem] grid">
+  <input 
+    class="h-[2.5rem] w-full py-1 pl-2 border bg-transparent rounded border-gray-200 transition text-[13px]
+    focus:border-white focus:ring focus:ring-gray-200 outline-none" 
+    type="text" 
+    name="search" 
+    id="searchId" 
+    placeholder="Search for name, brand, type..."
+  >
+
+  <label for="brandSelector" class="mt-[1rem]">Brand:</label>
+  <select id="brandSelector" name="brand" class="bg-transparent">
+    <option value="option1">All</option>
+    <option value="option2">Adidas</option>
+    <option value="option3">Puma</option>
+    <option value="option3">Nike</option>
+  </select>
+
+  <label for="productTypeSelector" class="mt-[1rem]">Product type:</label>
+  <select id="productTypeSelector" class="bg-transparent" name="productType">
+    <option value="option1">All</option>
+    <option value="option2">Camiseta</option>
+    <option value="option3">Pelota</option>
+    <option value="option3">Balon</option>
+  </select>
+
+  <label class="mt-[1rem]" for="minPrice">Minium price</label>
+  <input type="number" class="px-1 h-[2.5rem] border border-[1px] bg-transparent rounded border-gray-200" name="price" id="minPrice" [defaultValue]="0">
+  <label class="mt-[1rem]" for="maxPrice">Maxium price:</label>
+  <input type="number" class="px-1 h-[2.5rem] border border-[1px] bg-transparent rounded border-gray-200" name="price" id="maxPrice" [defaultValue]="0">
+
+  <div class="form-control mt-[1rem]">
+    <label class="cursor-pointer label">
+      <span class="text-black label-text">Only offers</span>
+      <input type="checkbox" class="checkbox checkbox-info" />
+    </label>
+
+    <label class="cursor-pointer label">
+      <span class="text-black label-text">Unstocked</span>
+      <input type="checkbox" class="checkbox checkbox-info" />
+    </label>
+
+  </div>
+</form>
