@@ -7,16 +7,19 @@ import { InViewDirective } from '../../directives/in-view.directive';
 import { MockDataService } from '../../services/mock-data.service';
 import { Product } from '../../models/product';
 import { LazyLoadingImagesService } from '../../services/lazy-loading-images.service';
+import { FirstModelComponent } from "./sections/first-model/first-model.component";
+import { CarrouselComponent } from "./sections/carrousel/carrousel.component";
 
 @Component({
   selector: 'app-landing',
   standalone: true,
   imports: [
-    RouterLink, 
-    FooterComponent, 
-    InViewDirective, 
+    FooterComponent,
+    InViewDirective,
     ProductCardComponent,
-  ],
+    FirstModelComponent,
+    CarrouselComponent,
+],
   providers: [MockDataService, LazyLoadingImagesService,],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'

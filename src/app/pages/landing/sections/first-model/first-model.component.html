@@ -1,0 +1,25 @@
+<section class="bg-slate-500 min-h-screen w-full shadow relative" id="first-section">
+  <img 
+    src="https://elmarketingdeportivo.com/wp-content/uploads/2024/12/682805-scaled.jpg" 
+    alt="landing-image"
+    class="absolute h-full w-full top-0 left-0 -z-100 opacity-0 transition duration-700 object-cover"
+    loading="lazy"
+    (load)="onLoadImage($event)"
+    >
+  <article class=" absolute bottom-0 left-0 mx-[5rem] mb-[7rem] text-white">
+    <h1 class="font-bold text-[4rem]">Impossible is nothing.</h1>
+    <p class="text-md w-[35rem] text-left">
+      Discover the fashion that defines you. At Dotén, we combine style, quality, and comfort to bring you 
+      unique pieces that highlight your personality. Every detail is crafted to accompany you in every moment, from casual to elegant. 
+      Dress your dreams!
+    </p>
+    <button 
+      class="bg-transparent border-white border-[1px] rounded-full h-[3rem] w-max mt-[2rem] text-lg italic font-bold
+            hover:bg-white hover:text-black transition flex"
+      >
+      <a routerLink="/products" class="h-full w-full text-center px-5 flex items-center rounded-full">
+        See our catalog here!
+      </a>
+    </button>
+  </article>
+</section>
