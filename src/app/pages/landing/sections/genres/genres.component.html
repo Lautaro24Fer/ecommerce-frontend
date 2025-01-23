@@ -6,10 +6,9 @@
         src="{{ item.image }}" 
         alt="genre-{{item.name}}"
       >
-      <button class="{{item.color}}">
-        <a routerLink="/products">
-          For {{item.name}}
-        </a>
+      <button class="{{item.color}} relative">
+        <span>For {{item.name}}</span>
+        <a routerLink="/products" class="absolute left-0 top-0 h-full w-full z-100"></a>
       </button>
     </article>
   }
