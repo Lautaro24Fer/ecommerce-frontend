@@ -1,0 +1,16 @@
+<section class="grid grid-cols-3 w-full h-[30rem] gap-[1rem]">
+  @for (item of genresData; track item.id) {
+    <article class="relative w-full opacity-0" appInView="animate-fadeInVerticalFromBottom">
+      <img 
+        class="absolute left-0 top-0 right-0 bottom-0 h-full w-full  object-cover -z-100" 
+        src="{{ item.image }}" 
+        alt="genre-{{item.name}}"
+      >
+      <button class="{{item.color}}">
+        <a routerLink="/products">
+          For {{item.name}}
+        </a>
+      </button>
+    </article>
+  }
+</section>

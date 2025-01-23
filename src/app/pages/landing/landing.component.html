@@ -2,22 +2,7 @@
   <!--FirstModel-->
   <app-first-model />
   <app-carrousel />
-  <section class="flex flex-col w-full opacity-0" appInView="animate-fadeInVerticalFromBottom">
-    <h2 class="text-[2rem] font-bold text-center">
-      Recently adquired
-      <p class="text-lg text-gray-800">Browse the newly products that you'll Love</p>
-    </h2>
-    <section class="flex flex-wrap justify-around h-max w-full my-5">
-      @for (item of data; track $index) {
-        <app-product-card 
-        [name]="item.name" 
-        [price]="item.price" 
-        [description]="item.description"
-        [color]="item.color" 
-        [imageUrl]="item.imageUrl"
-        />
-      }
-    </section>
-  </section>
+  <app-genres />
+  <app-new-products />
 </main>
 <app-footer />

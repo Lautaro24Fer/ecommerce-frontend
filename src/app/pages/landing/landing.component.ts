@@ -9,16 +9,18 @@ import { Product } from '../../models/product';
 import { LazyLoadingImagesService } from '../../services/lazy-loading-images.service';
 import { FirstModelComponent } from "./sections/first-model/first-model.component";
 import { CarrouselComponent } from "./sections/carrousel/carrousel.component";
+import { NewProductsComponent } from "./sections/new-products/new-products.component";
+import { GenresComponent } from "./sections/genres/genres.component";
 
 @Component({
   selector: 'app-landing',
   standalone: true,
   imports: [
     FooterComponent,
-    InViewDirective,
-    ProductCardComponent,
     FirstModelComponent,
     CarrouselComponent,
+    NewProductsComponent,
+    GenresComponent
 ],
   providers: [MockDataService, LazyLoadingImagesService,],
   templateUrl: './landing.component.html',
