@@ -1,62 +1,54 @@
-<div class="relative inline-block group">
-  <button
+<section class="relative inline-block group" id="body">
+  <button 
     class="relative text-sm font-semibold text-white bg-white/90 rounded-full p-2
       hover:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 
       focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-200 overflow-hidden"
+    
   >
-    <div
-      class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl group-hover:opacity-75 transition-opacity"
-    ></div>
   </button>
 
   <div
-    class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 transition-all duration-300 ease-out transform group-hover:translate-y-0 translate-y-2"
-  >
-    <div
-      class="relative p-4 bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-md rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(79,70,229,0.15)]"
+    class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 
+      bottom-0 right-0 top-1/2 -translate-y-1/2 mt-3 mr-3 w-[10rem] transition-all duration-300 ease-out 
+      transform group-hover:translate-y-0 translate-y-2 text-black bubblCard">
+    <div 
+      class="relative h-[15rem] bg-gradient-to-br from-white/95 to-gray-100/95 backdrop-blur-md 
+        rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(79,70,229,0.15)]"
     >
-      <div class="flex items-center gap-3 mb-2">
-        <div
-          class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-500/20"
+      
+
+      <img 
+        src="https://http2.mlstatic.com/D_NQ_NP_831709-MLA42172360550_062020-O.webp" 
+        alt="model"
+        class="absolute left-1/2 -top-10 -translate-x-1/2 object-contain w-[90%] mt-2 
+          bottom-[75%] rounded-2xl"  
+      >
+
+      <div class="absolute bottom-0 left-0 right-0 py-3 px-2">
+        <button
+          type="submit"
+          class="w-full flex justify-between items-center mx-auto shadow-xl px-3 text-[12px] text-no-wrap bg-gray-50 backdrop-blur-md 
+            lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all 
+            before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full 
+            before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 
+            before:hover:duration-700 relative z-10 overflow-hidden border-2 rounded-full group"
         >
+          See in shop!
           <svg
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="w-4 h-4 text-indigo-400"
+            class="w-8 h-8 justify-end group-hover:rotate-90 group-hover:fill-white text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
+            viewBox="0 0 16 19"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              clip-rule="evenodd"
-              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-              fill-rule="evenodd"
+              d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+              class="fill-gray-800 group-hover:fill-gray-800"
             ></path>
           </svg>
-        </div>
-        <h3 class="text-sm font-semibold text-white">Important Information</h3>
+        </button>
       </div>
-
-      <div class="space-y-2">
-        <p class="text-sm text-gray-300">
-          This is a tooltip with detailed information and custom styling.
-        </p>
-        <div class="flex items-center gap-2 text-xs text-gray-400">
-          <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
-            <path
-              clip-rule="evenodd"
-              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-              fill-rule="evenodd"
-            ></path>
-          </svg>
-          <span>Premium Feature</span>
-        </div>
-      </div>
-
-      <div
-        class="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500/10 to-purple-500/10 blur-xl opacity-50"
-      ></div>
-
-      <div
-        class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-gradient-to-br from-gray-900/95 to-gray-800/95 rotate-45 border-r border-b border-white/10"
-      ></div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- ARRIBA:  bottom-full left-1/2 -translate-x-1/2 mb-3 -->
+ <!-- ABAJO IZQUIERDA: bottom-0 right-0 top-1/2 -translate-y-1/2 mt-3 mr-3 -->
