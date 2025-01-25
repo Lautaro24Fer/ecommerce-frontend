@@ -11,6 +11,7 @@ import { FirstModelComponent } from "./sections/first-model/first-model.componen
 import { CarrouselComponent } from "./sections/carrousel/carrousel.component";
 import { NewProductsComponent } from "./sections/new-products/new-products.component";
 import { GenresComponent } from "./sections/genres/genres.component";
+import { SecondModelComponent } from "./sections/second-model/second-model.component";
 
 @Component({
   selector: 'app-landing',
@@ -20,7 +21,8 @@ import { GenresComponent } from "./sections/genres/genres.component";
     FirstModelComponent,
     CarrouselComponent,
     NewProductsComponent,
-    GenresComponent
+    GenresComponent,
+    SecondModelComponent
 ],
   providers: [MockDataService, LazyLoadingImagesService,],
   templateUrl: './landing.component.html',

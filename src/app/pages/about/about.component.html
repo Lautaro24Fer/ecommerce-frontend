@@ -1,1 +1,28 @@
-<h1>This is my about component</h1>
+<section class="flex justify-center pt-[4rem]">
+  <div class="max-w-[40rem] grid gap-[1.5rem]" appInView>
+    <header>
+      <h1 class="font-light text-[2rem]">Dotén.</h1>
+    </header>
+    <p>
+      We believe that great products start with great ideas. Our mission is to deliver high-quality, innovative
+      solutions that meet your needs and exceed your expectations. From carefully curated collections to a seamless
+      shopping experience, we aim to inspire confidence in every purchase.
+
+      Whether you're discovering us for the first time or returning as a loyal customer, we're here to make your journey
+      exceptional.
+    </p>
+    <section>
+      @for (item of faqData; track item.id) {
+        <div class="collapse collapse-arrow">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-lg font-medium">{{ item.title }}</div>
+          <div class="collapse-content">
+            <p>
+              {{ item.body }}
+            </p>
+          </div>
+        </div>
+      }
+    </section>
+  </div>
+</section>
