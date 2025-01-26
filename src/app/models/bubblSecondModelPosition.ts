@@ -1,4 +1,4 @@
 export interface BubblSecondModelPosition{
   bottomLeft: string,
-  centerTop: string
+  topCenter: string
 }

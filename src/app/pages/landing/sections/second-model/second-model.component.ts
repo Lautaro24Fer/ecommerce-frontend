@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { BubblHoverCardComponent } from "../../../../shared/bubbl-hover-card/bubbl-hover-card.component";
 import { BubblSecondModelPosition } from '../../../../models/bubblSecondModelPosition';
+import { Product } from '../../../../models/product';
+import { MockDataService } from '../../../../services/mock-data.service';
 
 @Component({
   selector: 'app-second-model',
@@ -11,29 +13,20 @@ import { BubblSecondModelPosition } from '../../../../models/bubblSecondModelPos
 })
 export class SecondModelComponent {
 
-  positions: BubblSecondModelPosition;
+  modelProducts: Product[];
 
-  @Input({ required: true })
-  position!: string;
-
-  @Input({ required: true })
-  image!: string;
-
-  @Input({ required: true })
-  productUrl!: string;
-
-  constructor() {
-    this.positions = {
-      bottomLeft: 'bottom-0 right-0 top-1/2 -translate-y-1/2 mt-3 mr-3',
-      centerTop: 'bottom-full left-1/2 -translate-x-1/2 mb-3'
-    }
+  constructor(private readonly dataService: MockDataService){
+    this.modelProducts = dataService.getMockedData().filter(product => {
+      const productsDisplayed: string[] = [
+        'Camiseta Atletico Madrid',
+        'Short Atletico Madrid',
+        'Botines Future 2.1 Netfit'
+      ]
+      if(!productsDisplayed.includes(product.name)){
+        return product;
+      }
+    })
   }
 
-  displayCard(){
-    document.querySelector("bubblCard")?.classList.add('bongAnimation')
-  }
-
-  undisplayCard(){
-    document.querySelector("bubblCard")?.classList.remove('bongAnimation')
-  }
+  
 }

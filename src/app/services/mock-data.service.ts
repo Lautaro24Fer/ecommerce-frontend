@@ -144,7 +144,7 @@ export class MockDataService {
         brand: 'Adidas'
       },
       {
-        id: 6,
+        id: 13,
         name: 'Puma Botines',
         price: 100,
         description: 'Esta es la descripcion de unos botines',
@@ -155,7 +155,7 @@ export class MockDataService {
         brand: 'Puma'
       },
       {
-        id: 13,
+        id: 14,
         name: 'Nike Jordan',
         price: 100,
         description: 'Esta es la descripcion de unos botines de basquet',
@@ -164,6 +164,39 @@ export class MockDataService {
         stock: 10,
         imageUrl: 'https://essential.vtexassets.com/arquivos/ids/1514011-800-auto?v=638591466763200000&width=800&height=auto&aspect=true',
         brand: 'Nike'
+      },
+      {
+        id: 15,
+        name: 'Camiseta Atletico Madrid',
+        price: 912,
+        imageUrl: 'https://http2.mlstatic.com/D_NQ_NP_831709-MLA42172360550_062020-O.webp',
+        description: 'Camiseta de la temporada 2018-2019',
+        color: ['red', 'white'],
+        category: 'Camiseta',
+        stock: 22,
+        brand: 'Nike'
+      },
+      {
+        id: 16,
+        name: 'Short Atletico Madrid',
+        price: 800,
+        imageUrl: 'https://static.futbolfactory.es/products/194928_1.jpg',
+        description: 'Short de la temporada 2018-2019',
+        color: ['blue', 'red'],
+        category: 'Pantalon',
+        stock: 11,
+        brand: 'Nike'
+      },
+      {
+        id: 17,
+        name: 'Botines Future 2.1 Netfit',
+        price: 200,
+        imageUrl: 'https://acdn.mitiendanube.com/stores/002/042/897/products/rrrrrrrrr1-563f7c4540917cf58f16693316716290-1024-1024.jpeg',
+        description: 'Botines',
+        color: ['green', 'black', 'white'],
+        category: 'Botines',
+        stock: 0,
+        brand: 'Puma'
       }
     ]
 

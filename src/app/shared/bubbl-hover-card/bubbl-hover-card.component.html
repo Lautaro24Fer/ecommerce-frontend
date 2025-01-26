@@ -3,14 +3,13 @@
     class="relative text-sm font-semibold text-white bg-white/90 rounded-full p-2
       hover:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 
       focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-200 overflow-hidden"
-    
   >
   </button>
 
   <div
-    class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 
-      bottom-0 right-0 top-1/2 -translate-y-1/2 mt-3 mr-3 w-[10rem] transition-all duration-300 ease-out 
-      transform group-hover:translate-y-0 translate-y-2 text-black bubblCard">
+    class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100
+      {{ cardPositionament() }} w-[10rem] transition-all duration-300 ease-out 
+      transform group-hover:translate-y-0 translate-y-2 text-black bubblCard z-[100]">
     <div 
       class="relative h-[15rem] bg-gradient-to-br from-white/95 to-gray-100/95 backdrop-blur-md 
         rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(79,70,229,0.15)]"
@@ -18,7 +17,7 @@
       
 
       <img 
-        src="https://http2.mlstatic.com/D_NQ_NP_831709-MLA42172360550_062020-O.webp" 
+        src="{{ image }}"
         alt="model"
         class="absolute left-1/2 -top-10 -translate-x-1/2 object-contain w-[90%] mt-2 
           bottom-[75%] rounded-2xl"  
