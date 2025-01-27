@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -9,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class FilterComponent {
 
+  @ViewChild('asideSection')
+  asideSection!: ElementRef;
+
+  @ViewChild('form')
+  form!: ElementRef;
+
+  toggleMenu(){
+    
+  }
 }

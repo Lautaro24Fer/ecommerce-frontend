@@ -21,7 +21,7 @@ export class MockDataService {
         stock: 10,
         imageUrl: 'https://celadasa.vtexassets.com/arquivos/ids/360396-800-auto?v=638720230589830000&width=800&height=auto&aspect=true',
         brand: 'Adidas',
-        offer: 90
+        offer: 0.9
       },
       {
         id: 2,
@@ -44,7 +44,7 @@ export class MockDataService {
         stock: 19,
         imageUrl: 'https://http2.mlstatic.com/D_NQ_NP_734394-MLA27593054609_062018-O.webp',
         brand: 'Adidas',
-        offer: 15
+        offer: 0.15
       },
       {
         id: 4,
@@ -122,7 +122,7 @@ export class MockDataService {
         stock: 0,
         imageUrl: 'https://http2.mlstatic.com/D_NQ_NP_734394-MLA27593054609_062018-O.webp',
         brand: 'Adidas',
-        offer: 10
+        offer: 0.1
       },
       {
         id: 11,
@@ -145,7 +145,7 @@ export class MockDataService {
         stock: 21,
         imageUrl: 'https://media2.solodeportes.com.ar/media/catalog/product/cache/3cb7d75bc2a65211451e92c5381048e9/b/o/botines-de-futbol-adidas-x-crazyfast-3-tf-azul-100010id9338001-1.jpg',
         brand: 'Adidas',
-        offer: 21
+        offer: 0.21
       },
       {
         id: 13,
@@ -157,7 +157,7 @@ export class MockDataService {
         stock: 0,
         imageUrl: 'https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/variants/vs5m52ouqvawcsjdqawq4q9xjpi9/77e513bcd3762f47919c96f85e400038a39acdbb0d268f51c1fd98fe5327bd96',
         brand: 'Puma',
-        offer: 50
+        offer: 0.5
       },
       {
         id: 14,
@@ -202,7 +202,7 @@ export class MockDataService {
         category: 'Botines',
         stock: 0,
         brand: 'Puma',
-        offer: 40
+        offer: 0.4
       }
     ]
 

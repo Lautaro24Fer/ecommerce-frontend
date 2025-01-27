@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FaqStructure } from '../../models/faq';
 import { InViewDirective } from '../../directives/in-view.directive';
+import { FooterComponent } from "../../shared/footer/footer.component";
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [InViewDirective],
+  imports: [InViewDirective, FooterComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
