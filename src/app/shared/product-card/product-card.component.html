@@ -1,30 +1,48 @@
 @defer () {
-  <article 
-  class="h-[30rem] max-w-[25rem] rounded-lg px-4 pt-4 overflow-hidden bg-white hover:scale-[.98] 
-    hover:shadow transition relative opacity-0"
-  appInView="animate-fadeInSmallToBig"
+<article class="h-[30rem] max-w-[25rem] rounded-lg px-4 pt-4 overflow-hidden bg-white
+    hover:scale-[.98] hover:shadow transition relative opacity-0 relative" appInView="animate-fadeInSmallToBig"
+>
+@if (product.stock === 0) {
+  <span 
+  class="absolute top-0 right-0 bg-red-400 px-4 py-2 text-center 
+        uppercase font-bold tracking-[2px] text-white text-sm"
   >
+    Unstocked
+  </span>
+}
+
+<div class="absolute inset-0 bgGradient -z-20"></div>
   <a routerLink="#" class="absolute h-full w-full top-0 left-0-bottom-0 right-0 rounded-lg"></a>
-  <img src="{{ imageUrl }}" alt="card-model" class="h-[20rem] w-full object-contain opacity-0" (load)="onImageLoad($event)" loading="lazy">
+
+  <img src="{{ product.imageUrl }}" alt="card-model" class="h-[20rem] w-full object-contain opacity-75 mix-blend-multiply"
+    (load)="onImageLoad($event)" loading="lazy">
+
   <div class="mt-4 grid gap-2">
     <h3 class="font-bold text-2xl text-ellipsis overflow-hidden text-nowrap" style="width: calc(100% - 1rem);">
-      {{ name }}
+      {{ product.name }}
     </h3>
-    <p class="font-bold text-2xl text-gray-800">{{ price | currency }}</p>
-    <p class="font-bold text-md text-gray-600">
-      {{ color.length }} styles avilable
+    @if (product.offer) {
+      <div class="flex gap-[.5rem] items-center">
+        <p class="font-light text-2xl text-gray-800">{{ getOfferPrice(product.price, product.offer) | currency }}</p>
+        <span class="text-sm font-light tracking-[1px] text-red-500">-{{ product.offer | percent }}</span>
+      </div>
+    }
+    @else {
+      <p class="font-light text-2xl text-gray-800">{{ product.price | currency }}</p>
+    }
+    <p class="uppercase text-sm tracking-[2.5px] text-gray-600">
+      {{ product.color.length }} styles avilable
     </p>
   </div>
+
 </article>
 }
 @placeholder {
-  <article class="bg-neutral-300 h-[30rem] max-w-[25rem] rounded-lg px-4 pt-4">
-  </article>
+<article class="bg-neutral-300 h-[30rem] max-w-[25rem] rounded-lg px-4 pt-4">
+</article>
 }
 @loading(minimum 1000ms;) {
-<div
-  class="flex flex-col bg-neutral-300 max-w-[25rem] h-[30rem] animate-pulse rounded-xl p-4 gap-4"
->
+<div class="flex flex-col bg-neutral-300 max-w-[25rem] h-[30rem] animate-pulse rounded-xl p-4 gap-4">
 </div>
 
 }

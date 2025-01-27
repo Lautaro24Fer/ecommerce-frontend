@@ -1,11 +1,7 @@
   <div class="mt-[1rem] grid grid-cols-4 gap-4 h-max">
     @for (item of data; track $index) {
         <app-product-card 
-        [name]="item.name" 
-        [description]="item.description" 
-        [imageUrl]="item.imageUrl" 
-        [price]="item.price"
-        [color]="item.color"
+          [product]="item"
         />
     }
   </div>

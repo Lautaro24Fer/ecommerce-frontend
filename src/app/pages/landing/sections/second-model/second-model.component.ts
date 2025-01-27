@@ -3,11 +3,12 @@ import { BubblHoverCardComponent } from "../../../../shared/bubbl-hover-card/bub
 import { BubblSecondModelPosition } from '../../../../models/bubblSecondModelPosition';
 import { Product } from '../../../../models/product';
 import { MockDataService } from '../../../../services/mock-data.service';
+import { InViewDirective } from '../../../../directives/in-view.directive';
 
 @Component({
   selector: 'app-second-model',
   standalone: true,
-  imports: [BubblHoverCardComponent],
+  imports: [BubblHoverCardComponent, InViewDirective],
   templateUrl: './second-model.component.html',
   styleUrl: './second-model.component.css'
 })
