@@ -3,7 +3,7 @@
 }
 
 .closeBoard{
-  animation: openToClose .2s ease .1s forwards;
+  animation: openToClose .2s ease forwards;
 }
 
 @keyframes openToClose {
