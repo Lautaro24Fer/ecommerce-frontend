@@ -1,6 +1,9 @@
-<aside #asideSection class="h-full w-[20rem]  transition pt-[3rem] px-[1rem] bg-white shadow relative">
+<aside 
+  class="h-full w-[20rem] transition pt-[3rem] px-[1rem] bg-white shadow relative
+  {{ isOpen() ? 'openBoard' : 'closeBoard'}}" #aside
+>
   <!--Filters-->
-  <form #form class="grid">
+  <form class="grid {{ isOpen() ? 'showFilter' : 'unshowFilter' }}" #form>
     <label for="brandSelector" class="mt-[1rem]">Brand:</label>
     <select id="brandSelector" name="brand" class="bg-transparent">
       <option value="option1">All</option>
@@ -60,8 +63,10 @@
     <input type="submit" value="Filter" class="rounded bg-slate-800 text-white my-[1.5rem] p-2 hover:cursor-pointer hover:bg-slate-900 transition">
   </form>
 
-  <button class="absolute h-[1.5rem] w-[1.5rem] p-1 z-100 text-[10px] right-0 right-0 top-1/2 border border-[1px] border-gray-200
+  <button 
+    class="absolute h-[1.5rem] w-[1.5rem] p-1 z-100 text-[10px] right-0 right-0 top-1/2 border border-[1px] border-gray-200
     -translate-y-1/2 -mr-[.7rem] bg-white rounded-full"
+    (click)="toggleMenu()"
   >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path

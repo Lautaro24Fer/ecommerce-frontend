@@ -1,0 +1,58 @@
+.openBoard{
+  animation: closeToOpen .4s ease forwards;
+}
+
+.closeBoard{
+  animation: openToClose .2s ease .1s forwards;
+}
+
+@keyframes openToClose {
+  0%{
+    width: 20rem;
+
+  }
+  100%{
+    width: 2rem;
+  }
+}
+
+@keyframes closeToOpen {
+  0%{
+    width: 2rem;
+  }
+  100%{
+    width: 20rem;
+  }
+}
+
+.showFilter{
+  position: inherit;
+  animation: showFilter .6s ease-in-out forwards;
+}
+
+.unshowFilter{
+  animation: unshowFilter .3s ease forwards;
+
+}
+
+@keyframes showFilter {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes unshowFilter {
+  0%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+
+}

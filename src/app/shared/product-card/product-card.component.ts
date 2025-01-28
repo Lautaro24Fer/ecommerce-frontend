@@ -25,9 +25,6 @@ export class ProductCardComponent{
   }
 
   getOfferPrice(price: number, offerPorc: number): number{
-    console.log("--get offer price--")
-    console.log("price: " + price)
-    console.log("offerPorc: " + offerPorc)
     const porcMount: number = price * offerPorc;
     return price - porcMount;
   }
