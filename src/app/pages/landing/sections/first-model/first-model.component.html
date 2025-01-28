@@ -6,20 +6,13 @@
     loading="lazy"
     (load)="onLoadImage($event)"
     >
-  <article class=" absolute bottom-0 left-0 mx-[5rem] mb-[7rem] text-white opacity-0" appInView="animate-fadeInVerticalFromBottom">
+  <article class="h-max absolute bottom-0 left-0 mx-[5rem] mb-[7rem] text-white opacity-0" appInView="animate-fadeInVerticalFromBottom">
     <h1 class="font-bold text-[4rem]">Impossible is nothing.</h1>
-    <p class="text-md w-[35rem] text-left">
+    <p class="text-md w-[35rem] text-left mb-[1rem]">
       Discover the fashion that defines you. At Dotén, we combine style, quality, and comfort to bring you 
       unique pieces that highlight your personality. Every detail is crafted to accompany you in every moment, from casual to elegant. 
       Dress your dreams!
     </p>
-    <button 
-      class="bg-transparent border-white border-[1px] rounded-full h-[3rem] w-max mt-[2rem] text-lg italic font-bold
-            hover:bg-white hover:text-black transition flex"
-      >
-      <a routerLink="/products" class="h-full w-full text-center px-5 flex items-center rounded-full">
-        See our catalog here!
-      </a>
-    </button>
+    <app-linked-button text="See our catalog here!"  href="/products"  hoverBackground="white"/>
   </article>
 </section>

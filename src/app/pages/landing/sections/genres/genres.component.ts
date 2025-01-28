@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ProductGenre } from '../../../../models/genres';
 import { RouterLink } from '@angular/router';
 import { InViewDirective } from '../../../../directives/in-view.directive';
+import { LinkedButtonComponent } from "../../../../shared/linked-button/linked-button.component";
 
 @Component({
   selector: 'app-genres',
   standalone: true,
-  imports: [RouterLink, InViewDirective],
+  imports: [InViewDirective, LinkedButtonComponent],
   templateUrl: './genres.component.html',
   styleUrl: './genres.component.css'
 })
