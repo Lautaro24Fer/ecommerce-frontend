@@ -1,37 +1,39 @@
-button {
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  background-color: white;
-  border: none;
+button{
+  background-color: gray;
   color: black;
+  width: 10rem;
+  height: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 3rem 0 0 0;
   position: relative;
-  width: max-content;
-  height: 45px;
-  transition: background-color 0.2s ease-in, all 0.15s ease-in;
+  transition: all .2s ease-in;
 }
 
-button::after {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 45px;
+button a{
   position: absolute;
-  top: 0;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+  z-index: 10;
+}
+
+button::after{
+  position: absolute;
   left: 0;
-  transform: translate(5px, 5px);
-  background-color: rgb(190, 196, 197);
-  transition: all 0.15s ease-in;
+  top: 0;
+  background-color: white;
+  width: 10rem;
+  height: 3rem;
+  content: "Go to shop";
+  display: grid;
+  place-items: center;
+  transition: all .2s ease-in;
 }
 
-button:hover::after {
-  transform: translate(-5px, -5px);
-}
 
-button:hover {
-  transform: translate(5px, 5px);
-}
+button:hover::after{
+  transform: translate(5px, -5px);
 
-button:active::after {
-  background-color: rgb(190, 196, 197);
 }

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { LazyLoadingImagesService } from '../../../../services/lazy-loading-images.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-third-model',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   providers: [LazyLoadingImagesService],
   templateUrl: './third-model.component.html',
   styleUrl: './third-model.component.css'
