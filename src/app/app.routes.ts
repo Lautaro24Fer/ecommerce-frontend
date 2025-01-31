@@ -7,15 +7,37 @@ export const routes: Routes = [
   },
   {
     path: 'products',
-    loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent)
-  },
-  {
-    path: 'about',
-    loadComponent: () => import('./pages/about/about.component').then(r => r.AboutComponent)
-  },
-  {
-    path: 'contact',
-    loadComponent: () => import('./pages/contact/contact.component').then(r => r.ContactComponent)
+    loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
+    children: [
+      {
+        path: 'outlet',
+        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
+      },
+      {
+        path: 'men',
+        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
+      },
+      {
+        path: 'woman',
+        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
+      },
+      {
+        path: 'kids',
+        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
+      },
+      {
+        path: 'wear',
+        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
+      },
+      {
+        path: 'foot',
+        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
+      },
+      {
+        path: 'sales',
+        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
+      },
+    ]
   },
   {
     path: '**',

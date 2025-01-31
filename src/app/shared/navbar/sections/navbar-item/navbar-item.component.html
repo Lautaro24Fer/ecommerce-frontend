@@ -1,6 +1,10 @@
 <li class="h-full flex group">
-  <a class="transition uppercase text-center h-full flex items-center text-black group-hover:text-red-500" 
-     routerLink="{{ navbarItem.mainRoot }}">
+  <a 
+    class="transition uppercase text-center h-full flex items-center text-black
+     group-hover:border-b-4 group-hover:border-slate-400" 
+    routerLinkActive="border-b-4 border-slate-800"
+    routerLink="{{ navbarItem.mainRoot }}"
+  >
     {{ navbarItem.name }}
   </a>
   @if(navbarItem.childrenRoutes) {

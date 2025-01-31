@@ -28,8 +28,8 @@ export class NavbarComponent implements OnInit{
         name: 'home',
       },
       {
-        mainRoot: '/products',
-        name: 'products',
+        mainRoot: '/products/outlet',
+        name: 'outlet',
         childrenRoutes: [
           {
             title: 'Botines',
@@ -85,8 +85,346 @@ export class NavbarComponent implements OnInit{
         ]
       },
       {
-        mainRoot: '/about',
-        name: 'about',
+        mainRoot: '/products/men',
+        name: 'men',
+        childrenRoutes: [
+          {
+            title: 'Botines',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Camisetas',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Balones',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          }
+        ]
+      },
+      {
+        mainRoot: '/products/woman',
+        name: 'woman',
+        childrenRoutes: [
+          {
+            title: 'Botines',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Camisetas',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Balones',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          }
+        ]
+      },
+      {
+        mainRoot: '/products/kids',
+        name: 'kids',
+        childrenRoutes: [
+          {
+            title: 'Botines',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Camisetas',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Balones',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          }
+        ]
+      },
+      {
+        mainRoot: '/products/wear',
+        name: 'wear',
+        childrenRoutes: [
+          {
+            title: 'Botines',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Camisetas',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Balones',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          }
+        ]
+      },
+      {
+        mainRoot: '/products/foot',
+        name: 'foot',
+        childrenRoutes: [
+          {
+            title: 'Botines',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Camisetas',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Balones',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          }
+        ]
+      },
+      {
+        mainRoot: '/products/sales',
+        name: 'Sales',
+        childrenRoutes: [
+          {
+            title: 'Botines',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Camisetas',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Balones',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          }
+        ]
       },
     ]
   }

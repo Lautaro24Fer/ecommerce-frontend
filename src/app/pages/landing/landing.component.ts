@@ -13,6 +13,7 @@ import { NewProductsComponent } from "./sections/new-products/new-products.compo
 import { GenresComponent } from "./sections/genres/genres.component";
 import { SecondModelComponent } from "./sections/second-model/second-model.component";
 import { ThirdModelComponent } from "./sections/third-model/third-model.component";
+import { AboutComponent } from "./sections/about/about.component";
 
 @Component({
   selector: 'app-landing',
@@ -24,7 +25,8 @@ import { ThirdModelComponent } from "./sections/third-model/third-model.componen
     NewProductsComponent,
     GenresComponent,
     SecondModelComponent,
-    ThirdModelComponent
+    ThirdModelComponent,
+    AboutComponent
 ],
   providers: [MockDataService, LazyLoadingImagesService,],
   templateUrl: './landing.component.html',
