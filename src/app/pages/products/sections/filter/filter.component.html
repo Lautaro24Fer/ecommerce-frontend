@@ -1,9 +1,9 @@
 <aside 
-  class="h-full w-[20rem] transition pt-[3rem] px-[1rem] bg-white shadow relative
+  class="h-full w-[2rem] transition pt-[3rem] px-[1rem] bg-white shadow relative
   {{ isOpen() ? 'openBoard' : 'closeBoard'}}" #aside
 >
   <!--Filters-->
-  <form class="grid {{ isOpen() ? 'showFilter' : 'unshowFilter' }}" #form>
+  <form class="grid opacity-0 {{ isOpen() ? 'showFilter' : 'unshowFilter' }}" #form>
     <label for="brandSelector" class="mt-[1rem]">Brand:</label>
     <select id="brandSelector" name="brand" class="bg-transparent">
       <option value="option1">All</option>

@@ -1,19 +1,13 @@
+/* BOARD */
+
 .openBoard{
-  animation: closeToOpen .4s ease forwards;
+  transition: all .2s ease-in;
+  animation: closeToOpen .2s ease-in forwards;
 }
 
 .closeBoard{
-  animation: openToClose .2s ease forwards;
-}
-
-@keyframes openToClose {
-  0%{
-    width: 20rem;
-
-  }
-  100%{
-    width: 2rem;
-  }
+  transition: all .2s ease-in;
+  animation: openToClose .2s ease-in forwards;
 }
 
 @keyframes closeToOpen {
@@ -25,17 +19,29 @@
   }
 }
 
+@keyframes openToClose {
+  0%{
+    width: 20rem;
+  }
+  100%{
+    width: 2rem;
+  }
+}
+
+
+/* Filtros */
+
 .showFilter{
-  position: inherit;
-  animation: showFilter .6s ease-in-out forwards;
+  transition: all .2s ease-in;
+  animation: showing .2s ease-in forwards;
 }
 
 .unshowFilter{
-  animation: unshowFilter .3s ease forwards;
-
+  transition: all .2s ease-in;
+  animation: unshowing .2s ease-in forwards;
 }
 
-@keyframes showFilter {
+@keyframes showing {
   0%{
     opacity: 0;
   }
@@ -44,15 +50,11 @@
   }
 }
 
-@keyframes unshowFilter {
+@keyframes unshowing {
   0%{
     opacity: 1;
-  }
-  25%{
-    opacity: 0;
   }
   100%{
     opacity: 0;
   }
-
 }

@@ -16,7 +16,7 @@ export class FilterComponent implements OnInit, AfterViewInit{
   @ViewChild('form')
   formEl!: ElementRef<HTMLElement>;
 
-  isOpen = signal(true);
+  isOpen = signal(false);
 
   constructor(private readonly renderer: Renderer2){}
   
@@ -28,7 +28,7 @@ export class FilterComponent implements OnInit, AfterViewInit{
   ngOnInit(): void { }
 
   ngAfterViewInit(): void {
-    this.renderer.removeClass(this.asideEl.nativeElement, 'openBoard');
-    this.renderer.removeClass(this.formEl.nativeElement, 'showFilter');
+    this.renderer.removeClass(this.asideEl.nativeElement, 'closeBoard');
+    this.renderer.removeClass(this.formEl.nativeElement, 'unshowFilter');
   }
 }
