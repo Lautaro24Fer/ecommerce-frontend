@@ -1,0 +1,13 @@
+<li class="h-full flex group">
+  <a class="transition uppercase text-center h-full flex items-center text-black group-hover:text-red-500" 
+     routerLink="{{ navbarItem.mainRoot }}">
+    {{ navbarItem.name }}
+  </a>
+  @if(navbarItem.childrenRoutes) {
+    <section class="hidden group-hover:flex flex-wrap absolute h-max left-0 w-full bg-stone-100 shadow gap-[2rem]">
+      @for (item of navbarItem.childrenRoutes; track $index) {
+        <app-navbar-hover-subsection [subMenu]="item" />
+      }
+    </section>
+  }
+</li>

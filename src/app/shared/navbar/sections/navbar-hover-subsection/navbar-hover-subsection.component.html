@@ -1,0 +1,9 @@
+<section class="p-[2rem]">
+  <h4 class="text-md font-light uppercase tracking-[1.5px]">{{ subMenu.title }}</h4>
+  <div class="h-[1px] bg-black w-full rounded-full"></div>
+  <ul class="flex flex-col mt-[1rem] gap-[.5rem]">
+    @for (item of subMenu.childrenRoutes; track $index) {
+      <li><a  class="text-sm relative" routerLink="{{ item.href }}">{{ item.name }}</a></li>
+    }
+  </ul>
+</section>
