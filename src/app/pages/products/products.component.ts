@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnChanges, OnInit, Renderer2, SimpleChanges } from '@angular/core';
 import { MockDataService } from '../../services/mock-data.service';
 import { Product } from '../../models/product';
 import { ProductCardComponent } from "../../shared/product-card/product-card.component";
@@ -7,7 +7,8 @@ import { FilterComponent } from "./sections/filter/filter.component";
 import { BoardComponent } from "./sections/board/board.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome"
 import { AsideClass } from './models/asideClasses';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-products',
@@ -28,8 +29,14 @@ export class ProductsComponent implements OnInit{
     private readonly router: Router
   ) {}
   ngOnInit(): void {
-    this.data = this.dataService.getMockedData();
     this.currentRoute = this.router.url;
+    this.data = this.dataService.getMockedData();
+
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        this.currentRoute = event.urlAfterRedirects;
+      });
   }
 
 }

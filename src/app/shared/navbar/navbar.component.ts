@@ -1,5 +1,5 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { NavbarRoute } from './models/navbarRoutes';
 import { NavbarItemComponent } from './sections/navbar-item/navbar-item.component';
 
@@ -10,9 +10,18 @@ import { NavbarItemComponent } from './sections/navbar-item/navbar-item.componen
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnInit {
+
+  validTypes: string[] = ['shirt', 'pants', 'short', 'shoes', 'accesories'];
+  validCategories: string[] = ['casual', 'sport', 'elegant'];
+  validGenres: string[] = ['men', 'woman', 'kids'];
 
   isHovered = signal(false);
+
+  currentType!: string | null;
+  currentCategory!: string | null;
+  currentGenre!: string | null;
+
 
   toogleSignal(){
     this.isHovered.set(!this.isHovered())
@@ -20,7 +29,16 @@ export class NavbarComponent implements OnInit{
 
   routes!: NavbarRoute[];
 
-  constructor() {}
+  constructor(private readonly route: ActivatedRoute, private router: Router) {
+    this.route.paramMap.subscribe(params => {
+      this.currentType = params.get('type');
+      this.currentCategory = params.get('category');
+      this.currentGenre = params.get('genre');
+
+      
+    })
+  }
+
   ngOnInit(): void {
     this.routes = [
       {
@@ -28,8 +46,9 @@ export class NavbarComponent implements OnInit{
         name: 'home',
       },
       {
-        mainRoot: '/products/outlet',
+        mainRoot: '/products/all',
         name: 'outlet',
+        queryParams: { sale: 'outlet' },
         childrenRoutes: [
           {
             title: 'Botines',
@@ -85,8 +104,9 @@ export class NavbarComponent implements OnInit{
         ]
       },
       {
-        mainRoot: '/products/men',
+        mainRoot: '/products/all',
         name: 'men',
+        queryParams: { genre: 'men' },
         childrenRoutes: [
           {
             title: 'Botines',
@@ -142,8 +162,9 @@ export class NavbarComponent implements OnInit{
         ]
       },
       {
-        mainRoot: '/products/woman',
+        mainRoot: '/products/all',
         name: 'woman',
+        queryParams: { genre: 'woman' },
         childrenRoutes: [
           {
             title: 'Botines',
@@ -199,8 +220,9 @@ export class NavbarComponent implements OnInit{
         ]
       },
       {
-        mainRoot: '/products/kids',
+        mainRoot: '/products/all',
         name: 'kids',
+        queryParams: { genre: 'kids' },
         childrenRoutes: [
           {
             title: 'Botines',
@@ -256,8 +278,8 @@ export class NavbarComponent implements OnInit{
         ]
       },
       {
-        mainRoot: '/products/wear',
-        name: 'wear',
+        mainRoot: '/products/shirts',
+        name: 'shirts',
         childrenRoutes: [
           {
             title: 'Botines',
@@ -313,8 +335,8 @@ export class NavbarComponent implements OnInit{
         ]
       },
       {
-        mainRoot: '/products/foot',
-        name: 'foot',
+        mainRoot: '/products/shoes',
+        name: 'shoes',
         childrenRoutes: [
           {
             title: 'Botines',
@@ -370,8 +392,9 @@ export class NavbarComponent implements OnInit{
         ]
       },
       {
-        mainRoot: '/products/sales',
+        mainRoot: '/products/all',
         name: 'Sales',
+        queryParams: { sale: 'discount' },
         childrenRoutes: [
           {
             title: 'Botines',

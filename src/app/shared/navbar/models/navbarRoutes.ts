@@ -11,5 +11,6 @@ export interface SubNavbarRoute {
 export interface NavbarRoute{
   name: string;
   mainRoot: string;
+  queryParams?: any;
   childrenRoutes?: SubNavbarRoute[]  
 }

@@ -29,7 +29,7 @@ export class InViewDirective implements OnInit {
           this.renderer.addClass(this.el.nativeElement, this.animationClass);
           this.observer?.disconnect();
         }
-      }, { threshold: 0.5 });
+      }, { threshold: 0.25 });
 
       this.observer.observe(this.el.nativeElement);
     }

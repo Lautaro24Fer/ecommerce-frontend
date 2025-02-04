@@ -6,7 +6,7 @@ import { NavbarHoverSubsectionComponent } from "../navbar-hover-subsection/navba
 @Component({
   selector: 'app-navbar-item',
   standalone: true,
-  imports: [RouterLink, NavbarHoverSubsectionComponent, RouterLinkActive],
+  imports: [RouterLink, NavbarHoverSubsectionComponent],
   templateUrl: './navbar-item.component.html',
   styleUrl: './navbar-item.component.css'
 })
@@ -20,6 +20,17 @@ export class NavbarItemComponent {
   isHovered = signal(false);
 
   constructor() {}
+
+  getUrl(){
+
+    let url: string = ''
+    if(this.navbarItem.queryParams){
+      url = this.navbarItem.mainRoot + this.navbarItem.queryParams as string;
+      return url;
+    }
+    url = this.navbarItem.mainRoot;
+    return url;
+  }
 
   eventEmitted(){
     this.isHovered.set(!this.isHovered());

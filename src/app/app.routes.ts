@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 
+
 export const routes: Routes = [
   {
     path: 'home',
@@ -7,37 +8,29 @@ export const routes: Routes = [
   },
   {
     path: 'products',
-    loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
     children: [
-      {
-        path: 'outlet',
-        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
+      { 
+        path: 'all',  
+        loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent)
+      },
+      { 
+        path: ':type',  
+        loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent)
+      },
+      { 
+        path: ':type/:category',  
+        loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent)
+      },
+      { 
+        path: ':type/:category/:genre',  
+        loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent)
       },
       {
-        path: 'men',
-        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
-      },
-      {
-        path: 'woman',
-        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
-      },
-      {
-        path: 'kids',
-        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
-      },
-      {
-        path: 'wear',
-        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
-      },
-      {
-        path: 'foot',
-        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
-      },
-      {
-        path: 'sales',
-        loadComponent: () => import('./pages/products/products.component').then(r => r.ProductsComponent),
-      },
-    ]
+        path: '**',
+        redirectTo: '/products/all',
+        pathMatch: 'full'
+      }
+  ]
   },
   {
     path: '**',
