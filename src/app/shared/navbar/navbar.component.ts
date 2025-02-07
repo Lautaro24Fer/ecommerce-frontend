@@ -12,7 +12,7 @@ import { NavbarItemComponent } from './sections/navbar-item/navbar-item.componen
 })
 export class NavbarComponent implements OnInit {
 
-  validTypes: string[] = ['shirt', 'pants', 'short', 'shoes', 'accesories'];
+  validTypes: string[] = ['all', 'shirt', 'pants', 'short', 'shoes', 'accesories'];
   validCategories: string[] = ['casual', 'sport', 'elegant'];
   validGenres: string[] = ['men', 'woman', 'kids'];
 
@@ -35,7 +35,14 @@ export class NavbarComponent implements OnInit {
       this.currentCategory = params.get('category');
       this.currentGenre = params.get('genre');
 
-      
+      if
+      (
+        !this.validTypes.includes(this.currentType!) ||
+        !this.validCategories.includes(this.currentCategory!) ||
+        !this.validGenres.includes(this.currentGenre!)
+      ){
+        this.router.navigate(['home'])
+      }
     })
   }
 
@@ -46,15 +53,14 @@ export class NavbarComponent implements OnInit {
         name: 'home',
       },
       {
-        mainRoot: '/products/all',
+        mainRoot: '/products/outlet',
         name: 'outlet',
-        queryParams: { sale: 'outlet' },
         childrenRoutes: [
           {
             title: 'Botines',
             childrenRoutes: [
               {
-                name: 'Modelo 1 ',
+                name: '',
                 href: '/products'
               },
               {
@@ -104,9 +110,8 @@ export class NavbarComponent implements OnInit {
         ]
       },
       {
-        mainRoot: '/products/all',
+        mainRoot: '/products/men-all',
         name: 'men',
-        queryParams: { genre: 'men' },
         childrenRoutes: [
           {
             title: 'Botines',
@@ -162,9 +167,8 @@ export class NavbarComponent implements OnInit {
         ]
       },
       {
-        mainRoot: '/products/all',
+        mainRoot: '/products/woman-all',
         name: 'woman',
-        queryParams: { genre: 'woman' },
         childrenRoutes: [
           {
             title: 'Botines',
@@ -220,9 +224,65 @@ export class NavbarComponent implements OnInit {
         ]
       },
       {
-        mainRoot: '/products/all',
-        name: 'kids',
-        queryParams: { genre: 'kids' },
+        mainRoot: '/products/boy-all',
+        name: 'boy',
+        childrenRoutes: [
+          {
+            title: 'Botines',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Camisetas',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Balones',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          }
+        ]
+      },
+      {
+        mainRoot: '/products/girl-all',
+        name: 'girl',
         childrenRoutes: [
           {
             title: 'Botines',
@@ -335,6 +395,63 @@ export class NavbarComponent implements OnInit {
         ]
       },
       {
+        mainRoot: '/products/pants',
+        name: 'pants',
+        childrenRoutes: [
+          {
+            title: 'Botines',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Camisetas',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          },
+          {
+            title: 'Balones',
+            childrenRoutes: [
+              {
+                name: 'Modelo 1 ',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 2',
+                href: '/products'
+              },
+              {
+                name: 'Modelo 3',
+                href: '/products'
+              },
+            ]
+          }
+        ]
+      },
+      {
         mainRoot: '/products/shoes',
         name: 'shoes',
         childrenRoutes: [
@@ -392,9 +509,8 @@ export class NavbarComponent implements OnInit {
         ]
       },
       {
-        mainRoot: '/products/all',
-        name: 'Sales',
-        queryParams: { sale: 'discount' },
+        mainRoot: '/products/404',
+        name: '404',
         childrenRoutes: [
           {
             title: 'Botines',

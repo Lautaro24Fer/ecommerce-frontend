@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { routeExistsGuard } from './guards/route-exists.guard';
 
 
 export const routes: Routes = [
@@ -7,28 +8,16 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/landing/landing.component').then(r => r.LandingComponent)
   },
   {
+    path: '404',
+    loadComponent: () => import('./pages/not-found/not-found.component').then(r => r.NotFoundComponent)
+  },
+  {
     path: 'products',
     children: [
       { 
-        path: 'all',  
+        path: ':slug',  
+        canActivate: [routeExistsGuard],
         loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent)
-      },
-      { 
-        path: ':type',  
-        loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent)
-      },
-      { 
-        path: ':type/:category',  
-        loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent)
-      },
-      { 
-        path: ':type/:category/:genre',  
-        loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent)
-      },
-      {
-        path: '**',
-        redirectTo: '/products/all',
-        pathMatch: 'full'
       }
   ]
   },
