@@ -508,63 +508,6 @@ export class NavbarComponent implements OnInit {
           }
         ]
       },
-      {
-        mainRoot: '/products/404',
-        name: '404',
-        childrenRoutes: [
-          {
-            title: 'Botines',
-            childrenRoutes: [
-              {
-                name: 'Modelo 1 ',
-                href: '/products'
-              },
-              {
-                name: 'Modelo 2',
-                href: '/products'
-              },
-              {
-                name: 'Modelo 3',
-                href: '/products'
-              },
-            ]
-          },
-          {
-            title: 'Camisetas',
-            childrenRoutes: [
-              {
-                name: 'Modelo 1 ',
-                href: '/products'
-              },
-              {
-                name: 'Modelo 2',
-                href: '/products'
-              },
-              {
-                name: 'Modelo 3',
-                href: '/products'
-              },
-            ]
-          },
-          {
-            title: 'Balones',
-            childrenRoutes: [
-              {
-                name: 'Modelo 1 ',
-                href: '/products'
-              },
-              {
-                name: 'Modelo 2',
-                href: '/products'
-              },
-              {
-                name: 'Modelo 3',
-                href: '/products'
-              },
-            ]
-          }
-        ]
-      },
     ]
   }
 

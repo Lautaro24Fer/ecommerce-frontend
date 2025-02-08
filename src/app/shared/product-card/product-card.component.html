@@ -12,7 +12,7 @@
 }
 
 <div class="absolute inset-0 bgGradient -z-20"></div>
-  <a routerLink="#" class="absolute h-full w-full top-0 left-0-bottom-0 right-0 rounded-lg"></a>
+  <a [routerLink]="['/product', product.id]" class="absolute h-full w-full top-0 left-0-bottom-0 right-0 rounded-lg z-10"></a>
 
   <img src="{{ product.imageUrl }}" alt="card-model" class="h-[20rem] w-full object-contain opacity-75 mix-blend-multiply"
     (load)="onImageLoad($event)" loading="lazy">

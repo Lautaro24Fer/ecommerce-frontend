@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { routeExistsGuard } from './guards/route-exists.guard';
+import path from 'node:path';
+import { productExistsResolver } from './resolvers/product-exists.resolver';
 
 
 export const routes: Routes = [
@@ -12,6 +14,16 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/not-found/not-found.component').then(r => r.NotFoundComponent)
   },
   {
+    path: 'product',
+    children: [
+      {
+        path: ':id',
+        resolve: [productExistsResolver],
+        loadComponent: () => import('./pages/product/product.component').then(r => r.ProductComponent)
+      }
+    ]
+  },
+  {
     path: 'products',
     children: [
       { 
@@ -21,9 +33,4 @@ export const routes: Routes = [
       }
   ]
   },
-  {
-    path: '**',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  }
 ];
