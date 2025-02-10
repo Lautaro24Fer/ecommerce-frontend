@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { routeExistsGuard } from './guards/route-exists.guard';
-import path from 'node:path';
 import { productExistsResolver } from './resolvers/product-exists.resolver';
 
 
@@ -18,7 +17,7 @@ export const routes: Routes = [
     children: [
       {
         path: ':id',
-        resolve: [productExistsResolver],
+        resolve: { product: productExistsResolver },
         loadComponent: () => import('./pages/product/product.component').then(r => r.ProductComponent)
       }
     ]

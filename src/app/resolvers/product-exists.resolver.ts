@@ -12,16 +12,20 @@ export const productExistsResolver: ResolveFn<boolean | Product> = (route, state
   const id = route.paramMap.get('id');
 
   if(!id || id === ''){
-    router.parseUrl('/404')
+    console.log("--El producto con id " + id + " no fue encontrado")
+    router.parseUrl('/404');
     return of(false);
   }
 
   const product = dataService.getMockedData().find(r => r.id === +id);
 
   if(!product){
-    router.parseUrl('/404')
+    console.log("--El producto con id " + id + " no fue encontrado")
+    router.parseUrl('/404');
     return of(false);
   }
 
+  console.log("-- Producto encontrado --")
+  console.log(product)
   return of(product);
 };

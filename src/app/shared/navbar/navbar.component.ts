@@ -508,6 +508,10 @@ export class NavbarComponent implements OnInit {
           }
         ]
       },
+      {
+        mainRoot: '/product/1',
+        name: 'p1',
+      }
     ]
   }
 
