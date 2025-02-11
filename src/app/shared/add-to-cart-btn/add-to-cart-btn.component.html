@@ -1,0 +1,14 @@
+<button 
+  id="cart-button" 
+  class="{{ isPressed() ? 'activeState' : 'defaultState' }}
+    w-[8rem] transition grid place-items text-white
+    font-semibold px-4 py-2"
+  (click)="toggleState()"
+  >
+  <span class="flex gap-2 items-center w-max transition">
+    <span id="shop-icon" class="material-icons">
+    shopping_cart
+    </span>
+    {{ isPressed() ? 'Remove to cart' : 'Add to cart' }}
+  </span>
+</button>

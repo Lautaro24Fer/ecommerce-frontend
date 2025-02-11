@@ -1,0 +1,41 @@
+#cart-button.defaultState:hover{
+  width: 10rem;
+}
+
+#cart-button.defaultState:hover #shop-icon{
+  animation: slide 0.2s ease-out forwards;
+}
+
+#cart-button.activeState:hover{
+  background-color: rgb(184, 9, 9);
+}
+
+#shop-icon{
+  position: absolute;
+  opacity: 0;
+}
+
+.defaultState{
+  background-color: rgb(60, 60, 60);
+}
+
+.activeState{
+  background-color: rgb(218, 12, 12);
+  width: max-content;
+}
+
+@keyframes slide {
+0% {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+          opacity: 0;
+}
+100% {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+          opacity: 1;
+          position: relative;
+}
+}
+
+

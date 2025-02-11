@@ -1,0 +1,16 @@
+<section>
+  <h3>Colors avilables</h3>
+  <ul class="flex gap-5 items-center">
+    @for (item of colors; track $index) {
+      <li 
+        class="w-[1.5rem] h-[1.5rem] rounded-full p-[1px]"
+        >
+        <div 
+          class="w-full h-full rounded-full hover:" 
+          [ngStyle]="{ backgroundColor: getTone(item) }"
+          >
+        </div>
+      </li>
+    }
+  </ul>
+</section>
