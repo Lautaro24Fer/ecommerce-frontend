@@ -1,0 +1,30 @@
+input{
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input:checked{
+  animation: shadowInset .3s ease-in-out forwards;
+}
+
+@keyframes shadowInset {
+  0%{
+    -webkit-box-shadow: inset 0px 0px 0px 10px #E5E7EB;
+  -moz-box-shadow: inset 0px 0px 0px 10px #E5E7EB;
+  box-shadow: inset 0px 0px 0px 10px #E5E7EB;
+  }
+  75%{
+    -webkit-box-shadow: inset 0px 0px 0px 2px #E5E7EB;
+  -moz-box-shadow: inset 0px 0px 0px 2px #E5E7EB;
+  box-shadow: inset 0px 0px 0px 2px #E5E7EB;
+  }
+  100%{
+    -webkit-box-shadow: inset 0px 0px 0px 4px #E5E7EB;
+  -moz-box-shadow: inset 0px 0px 0px 4px #E5E7EB;
+  box-shadow: inset 0px 0px 0px 4px #E5E7EB;
+  }
+}

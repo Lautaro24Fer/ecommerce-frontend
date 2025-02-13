@@ -1,16 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { NgStyle } from '@angular/common';
+import { Component, Input, Output, signal } from '@angular/core';
 import { Color } from '../../models/color';
-import { NgClass, NgStyle } from '@angular/common';
-import { ColorComponent } from "../color/color.component";
 
 @Component({
-  selector: 'app-colors',
+  selector: 'app-color',
   standalone: true,
-  imports: [NgClass, NgStyle],
-  templateUrl: './colors.component.html',
-  styleUrl: './colors.component.css'
+  imports: [NgStyle],
+  templateUrl: './color.component.html',
+  styleUrl: './color.component.css'
 })
-export class ColorsComponent {
+export class ColorComponent {
+
+  @Input({ required: true })
+  color!: string;
 
   colorsAvilable: Color[] = [
     { name: 'red', tone: '#FF0000' },
@@ -28,14 +30,7 @@ export class ColorsComponent {
     { name: 'magenta', tone: '#FF00FF' }
   ];
 
-  @Input({ required: true })
-  colors!: string[];
-
-  getData(data: string){
-    console.log("\n\n________________")
-    console.log("esto es la data")
-    console.log(data)
-  }
+  isPressed = signal(false);
 
   getTone(colorName: string): string {
     const color: Color | undefined = this.colorsAvilable.find(c => c.name === colorName);
@@ -48,5 +43,9 @@ export class ColorsComponent {
     return color.tone.toLowerCase();
   }
 
+
+  toogleStatus(): void{
+    this.isPressed.set(!this.isPressed());
+  }
 
 }
