@@ -1,14 +1,11 @@
 <section>
   <h3>Colors avilables</h3>
-  <form class="flex gap-5 items-center">
-    @for (item of colors; track $index) {
-      {{ getData(item) }}
-      <input 
-      type="radio"
-      name="radio-color"
-      class="inset-shadow-gray-200 border border-2px border-gray-800"
-      [ngStyle]="{ backgroundColor: item }"
-    >
-    }
-  </form>
+  @for (item of colors; track $index) {
+    <input 
+    type="radio"
+    name="radio-color"
+    class="inset-shadow-gray-200 border border-2px border-gray-800"
+    [ngStyle]="{ backgroundColor: item }"
+  >
+  }
 </section>

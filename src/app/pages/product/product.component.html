@@ -18,15 +18,17 @@
         </div>
       }
       <h2 class="font-light text-[2rem] tracking-[1px]">{{ product.name }}</h2>
+      <h3 class="font-semibold text-[2.5rem]"> {{ product.price | currency }} </h3>
+      <form class="">
+        <app-colors [colors]="product.color" />
+        <app-sizes [sizes]="product.sizes" />
+        <app-add-to-cart-btn />
+      </form>
       <p>
         {{ product.description }}
       </p>
-      <h3 class="font-semibold text-[2.5rem]"> {{ product.price | currency }} </h3>
-      @if(product.color){
-        <app-colors [colors]="product.color" />
-      }
-      <app-add-to-cart-btn />
     </article>
+
   </section>
 
 </section> 

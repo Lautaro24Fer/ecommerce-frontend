@@ -1,12 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Color } from '../../models/color';
 import { NgClass, NgStyle } from '@angular/common';
-import { ColorComponent } from "../color/color.component";
 
 @Component({
   selector: 'app-colors',
   standalone: true,
-  imports: [NgClass, NgStyle],
+  imports: [NgStyle],
   templateUrl: './colors.component.html',
   styleUrl: './colors.component.css'
 })

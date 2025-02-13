@@ -1,8 +1,0 @@
-input{
-  height: 2rem;
-  width: 2rem;
-}
-
-input:checked{
-  background-color: red;
-}
